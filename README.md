@@ -4,3 +4,5 @@ Created a program that determines the best approach for the attacking portion of
 To run the program execute the runGame.m file.
 
 The GUI will pop up and allow you select the desired settings.
+
+![Image description]
