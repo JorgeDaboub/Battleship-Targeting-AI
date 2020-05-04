@@ -5,4 +5,4 @@ To run the program execute the runGame.m file.
 
 The GUI will pop up and allow you select the desired settings.
 
-![Image description]
+![Image description]images/image1.png
