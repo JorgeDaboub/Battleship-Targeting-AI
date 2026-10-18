@@ -1,0 +1,34 @@
+% Clearing 
+clear
+clc
+
+
+numb1 = ('1,');
+numb=('234567890');
+K = table2cell(readtable('Form.xlsx'));
+[trows,tcoloumns] = size(K);
+
+array = zeros(10,10,trows);
+%Going down the rows of the table
+for runs = 1:trows
+    %Going accros each column of the table
+    for ix = 2:11
+        Checking if it has a 1
+        if isempty(strfind(K(runs,ix), numb1))
+            array((ix-1),1,runs) = 1;
+        end
+        
+        %Checking each number in the cell
+        for i = 1:9
+            if cellfun(@(s) any(s == numb(i)),K(runs,ix)    )
+                array(ix-1,i+1,runs) = 1;
+            end
+        end
+    end
+end
+
+
+    c = {'hi'};
+    lettertofind = 'i';
+    %method 1: plain character comparison
+    cellfun(@(s) any(s == lettertofind), c)
